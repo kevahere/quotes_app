@@ -1,9 +1,7 @@
 <h1>Quotes</h1>
 <ul>
-  <h3>
-    <li *ngFor='let quote of quotes'>
-      {{quote.words}}      <h6><li *ngFor='let quote of quotes'>{{quote.author}}</li></h6>
-
-    </li>
-  </h3>
+  <div *ngFor='let quote of quotes'>
+    <li>{{quote.words}}</li>
+      
+  </div>
 </ul>
