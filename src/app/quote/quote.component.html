@@ -3,5 +3,6 @@
   <div *ngFor='let quote of quotes'>
     <li>{{quote.words}}</li>
     <app-quote-details [quote]='quote'></app-quote-details>
+    <button (click) = 'quoteDelete(true)'>Delete Quote</button>
   </div>
 </ul>
