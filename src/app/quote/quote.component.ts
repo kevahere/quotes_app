@@ -1,11 +1,11 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css']
- })
+})
 export class QuoteComponent implements OnInit {
   quotes = [
 
@@ -14,11 +14,22 @@ export class QuoteComponent implements OnInit {
     new Quote(3, "Simba mwenda pole ndiye mla nyama", "Snoop Lion"),
   ];
 
-  @Input() quote:Quote;
-  @Output() isComplete = new EventEmitter <boolean>();
+  @Input() quote: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();
 
-  quoteDelete(complete:boolean){
+  quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
+  }
+
+  deleteQuote(isComplete,index){
+    if (isComplete){
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].words}`)
+
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
+
+    }
   }
 
   constructor() { }
