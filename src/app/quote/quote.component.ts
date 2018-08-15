@@ -14,6 +14,9 @@ export class QuoteComponent implements OnInit {
     new Quote(3, "Simba mwenda pole ndiye mla nyama", "Snoop Lion"),
   ];
 
+    newQuote = new Quote(0,"","");
+
+
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 

@@ -13,7 +13,9 @@ import { FormsModule } from '@angular/forms';
     QuoteDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
