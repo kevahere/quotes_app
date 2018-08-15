@@ -7,7 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes = [
+  Quotes = [
 
     new Quote(1, "Misery loves company", "Le Miserable"),
     new Quote(2, "You can sleep when you die", "Taheed Epps"),
