@@ -1,13 +1,10 @@
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <li>{{quote.words}}</li>
-
-    <app-quote-details [quote]='quote'></app-quote-details>
-    <button (click)='quoteDelete(true)'>Delete Quote</button>
+<div class="jumbotron">
+  <h1>Quotes</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="newQuote($event)"></app-quote-form>
+    </div>
   </div>
-
-  <div class="container-fluid">
-    <h2>Add your best quote here!</h2>
-    <app-quote-form></app-quote-form>
-  </div>
-</ul>
+</div>
